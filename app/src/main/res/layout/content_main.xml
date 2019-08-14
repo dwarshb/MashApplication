@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_main"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".MainActivity"
+    tools:showIn="@layout/activity_main">
+    <RelativeLayout
+        android:id="@+id/profvw"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+        <ImageView
+            android:background="@drawable/triangle"
+            android:id="@+id/triangle"
+            android:layout_alignParentLeft="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp" />
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:src="@drawable/notification"
+            android:layout_width="24dp"
+            android:layout_marginRight="15dp"
+            android:layout_height="24dp" />
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:src="@drawable/reward"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+            <ImageView
+                android:layout_marginRight="15dp"
+                android:src="@drawable/group"
+                android:layout_width="24dp"
+                android:layout_height="24dp" />
+
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/profile"
+            android:layout_centerInParent="true"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.CardView
+                android:layout_width="70dp"
+                app:cardCornerRadius="35dp"
+                android:id="@+id/imagevw"
+                app:cardElevation="8dp"
+                android:layout_centerVertical="true"
+                android:layout_height="70dp">
+                <ProgressBar
+                    android:layout_centerInParent="true"
+                    android:id="@+id/progressBar"
+                    android:progressTint="@android:color/darker_gray"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/circular" />
+                <ImageView
+                    android:padding="10dp"
+                    android:src="@drawable/boy"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </android.support.v7.widget.CardView>
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/imagevw"
+                android:id="@+id/name"
+                android:text="mash"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@+id/name"
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/imagevw"
+                android:id="@+id/coins"
+                android:text="0 Coins"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_marginLeft="16dp"
+                android:layout_toRightOf="@+id/imagevw"
+                android:id="@+id/lang"
+                android:layout_below="@+id/coins"
+                android:text="General English"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:layout_marginLeft="16dp"
+            android:id="@+id/percent"
+            android:text="0 %"
+            android:layout_centerVertical="true"
+            android:textColor="@android:color/white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:animateLayoutChanges="true"
+        android:layout_below="@+id/profvw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/title"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/titleic"
+                android:tint="@android:color/holo_blue_dark"
+                android:src="@drawable/reading"
+                android:layout_width="32dp"
+                android:layout_height="32dp" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/titleic"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textStyle="bold"
+                android:text="Practice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <GridLayout
+            android:animateLayoutChanges="true"
+            android:layout_centerInParent="true"
+            android:layout_below="@+id/title"
+            android:layout_width="wrap_content"
+            android:useDefaultMargins="true"
+            android:columnCount="2"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:id="@+id/videolsn"
+                android:layout_gravity="center"
+                android:padding="30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/videolessn"
+                    android:layout_width="32dp"
+                    android:tint="@android:color/holo_red_dark"
+                    android:layout_height="32dp" />
+                <TextView
+                    android:text="Video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="Lessons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/news"
+                android:padding="30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/news"
+                    android:layout_width="32dp"
+                    android:tint="@android:color/holo_red_dark"
+                    android:layout_height="32dp" />
+                <TextView
+                    android:text="News"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="Lessons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/videotip"
+                android:padding="30dp"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@drawable/videotip"
+                    android:layout_width="32dp"
+                    android:tint="@android:color/holo_red_dark"
+                    android:layout_height="32dp" />
+                <TextView
+                    android:text="Video"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:text="Lessons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+            <LinearLayout
+                android:padding="30dp"
+                android:gravity="center"
+                android:id="@+id/practice_lay"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/pracimg"
+                    android:animateLayoutChanges="true"
+                    android:src="@drawable/practice"
+                    android:layout_width="32dp"
+                    android:tint="@android:color/holo_red_dark"
+                    android:layout_height="32dp" />
+                <TextView
+                    android:id="@+id/practitle"
+                    android:animateLayoutChanges="true"
+                    android:text="Practice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@+id/pracdesc"
+                    android:animateLayoutChanges="true"
+                    android:text="Games"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </GridLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+    <LinearLayout
+        android:padding="30dp"
+        android:gravity="center"
+        android:id="@+id/practice_lay"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:animateLayoutChanges="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/pracimg"
+            android:animateLayoutChanges="true"
+            android:src="@drawable/practice"
+            android:layout_width="32dp"
+            android:tint="@android:color/holo_red_dark"
+            android:layout_height="32dp" />
+        <TextView
+            android:id="@+id/practitle"
+            android:animateLayoutChanges="true"
+            android:text="Practice Games"
+            android:paddingLeft="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/dashboard"
+        android:gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@android:color/holo_blue_dark"
+        android:layout_below="@+id/practice_lay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:padding="15dp"
+            android:textColor="@android:color/white"
+            android:text="Words Learned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:layout_margin="10dp"
+            android:paddingRight="20dp"
+            android:textColor="@android:color/white"
+            android:text="0"
+            android:background="@drawable/rborder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:padding="15dp"
+            android:textColor="@android:color/white"
+            android:text="Coins Earned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:padding="15dp"
+            android:textColor="@android:color/white"
+            android:text="0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:layout_below="@+id/dashboard"
+        android:layout_width="match_parent"
+
+        android:id="@+id/gameslist"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

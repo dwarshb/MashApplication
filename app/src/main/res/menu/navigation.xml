@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_lesson"
+        android:icon="@drawable/lessons"
+        android:title="Lessons" />
+
+    <item
+        android:id="@+id/nav_alllesson"
+        android:icon="@drawable/alllessons"
+        android:title="All Lessons" />
+
+    <item
+        android:id="@+id/nav_progress"
+        android:icon="@drawable/progress"
+        android:title="Progress" />
+
+    <item
+        android:id="@+id/nav_practice"
+        android:icon="@drawable/reading"
+        android:title="Practise" />
+
+    <item
+        android:id="@+id/nav_performance"
+        android:icon="@drawable/performance"
+        android:title="Performance" />
+
+</menu>
