@@ -36,6 +36,15 @@ public class MainActivity extends AppCompatActivity {
         boyimg = (CardView)findViewById(R.id.imagevw);
         pract = (TextView)findViewById(R.id.practitle);
         pracd = (TextView)findViewById(R.id.pracdesc);
+        Animation trir = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.triangler);
+        Animation boyr = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.zoomin);
+        Animation bottomr = AnimationUtils.loadAnimation(getApplicationContext(),
+                R.anim.bottomnavr);
+        findViewById(R.id.navigation).startAnimation(bottomr);
+        triangle.startAnimation(trir);
+        boyimg.startAnimation(boyr);
         ProgressBar progressBar = (ProgressBar)findViewById(R.id.progressBar);
         ObjectAnimator animation = ObjectAnimator.ofInt(progressBar, "progress", 0, 100);
         animation.setDuration(1000); // in milliseconds
